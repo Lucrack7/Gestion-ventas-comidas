@@ -1,0 +1,21 @@
+@use "./../../../../assets/styles/variables.scss";
+
+div{
+  width: 80%;
+  min-height: 250px;
+  margin-left: 10%;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: variables.$border-radius-chico;
+}
+
+h3{
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  background-color: rgba(203, 223, 223, 0.87);
+  font-size: 22px;
+}

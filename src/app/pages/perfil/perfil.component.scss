@@ -1,0 +1,84 @@
+@use "./../../../assets/styles/variables.scss";
+
+*{
+  font-size: large;
+}
+
+form, form div{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-left: 30%;
+}
+
+form{
+  gap: 20px;
+  div{
+    gap: 5px;
+    margin: 10px 40px;
+  }
+}
+
+label{
+  color: variables.$color-texto-claro;
+}
+
+input{
+  border:none;
+  border-bottom: 2px solid rgb(178, 178, 178);
+  padding-bottom: 10px;
+  padding-top: 5px;
+  &:focus{
+    outline: none;
+  }
+}
+
+
+button{
+  width: 40%;
+  max-width: 80%;
+  height: 40px;
+  margin-left: 15%;
+  font-weight: bold;
+  background-color: rgb(145, 254, 145);
+  border: none;
+  border-radius: variables.$border-radius-chico;
+  cursor: pointer;
+  &:disabled{
+    background-color: rgb(217, 217, 217);
+  }
+}
+
+button:hover{
+  background-color: rgb(81, 253, 81);
+}
+
+.error{
+  color: red;
+}
+
+
+/* Medias query para pantallas pequeñas (por ejemplo, menos de 768px de ancho) */
+@media (max-width: 768px) {
+  form, form div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 10px;
+  }
+
+  button{
+    width: 100%;
+    height: 40px;
+    margin-left: 0;
+    font-weight: bold;
+    background-color: rgb(145, 254, 145);
+    border: none;
+    border-radius: variables.$border-radius-chico;
+    cursor: pointer;
+    &:disabled{
+      background-color: rgb(217, 217, 217);
+    }
+  }
+}
